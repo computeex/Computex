@@ -8,105 +8,112 @@
         <link href="css/css.css" rel="stylesheet" />
     </head>
     <body>
-        <div class="testbox">
-            <form method="post" id="myForm"
-                action="https://script.google.com/macros/s/AKfycbyvc7rb1K-n7IzDzeW3JX9wD9McD4voxEZZA7fI3RwWAdjSHd1NNsk4ioU_16yJ-F7K/exec">
-                <div class="banner">
-                </div>
-                <p class="pp">Please Fill your presence</p>
-                <div class="item">
-                    <label for="name">Full Name<span>*</span></label>
-                    <input id="name" type="text" name="name" required
-                        placeholder="Enter Your Name" />
-                </div>
+<div class="testbox">
+        <form method="post" id="myForm" action="https://script.google.com/macros/s/AKfycbyEFiljxL0GQamQ6BA839dT3fxGxH4ujqp8Mj2D7qEAG9fXlnhFZ0rNZyXPP_hrBh1T/exec">
+            <div class="banner">
+            </div>
+            <p class="pp">Please Fill your presence</p>
+            <div class="item">
+                <label for="name">Full Name<span>*</span></label>
+                <input id="name" type="text" name="name" required placeholder="Enter Your Name" />
+            </div>
 
-                <div class="item">
-                    <label for="title">Your Title<span>*</span></label>
-                    <br>
-                    <select required id="position" name="position">
-                        <option value="Title ">Please select your Title</option>
-                        <option>
-                            student
-                        </option>
-                        <option>
-                            Member
-                        </option>
+            <div class="item">
+                <label for="title">Your Title<span>*</span></label>
+                <br>
+                <select required id="position" name="position">
+                    <option value="Title ">Please select your Title</option>
+                    <option>
+                        student
+                    </option>
+                    <option>
+                        Member
+                    </option>
 
-                        <option>
-                            Supervisor
-                        </option>
-                        <option>
-                            Trainer
-                        </option>
-                        <option>
-                            Business Administrator
-                        </option>
+                    <option>
+                        Supervisor
+                    </option>
+                    <option>
+                        Trainer
+                    </option>
+                    <option>
+                        Business Administrator
+                    </option>
 
-                        <option>
-                            Director
-                        </option>
-                    </select>
-                </div>
-                <div class="item">
-                    <label for="titel">Your sector<span>*</span></label>
-                    <br>
-                    <select required id="sector" name="sector">
-                        <option value="Title ">
-                            Please select your sector
-                        </option>
+                    <option>
+                        Director
+                    </option>
+                </select>
+            </div>
+            <div class="item">
+                <label for="titel">Your sector<span>*</span></label>
+                <br>
+                <select required id="sector" name="sector">
+                    <option value="Title ">
+                        Please select your sector
+                    </option>
 
-                        <option>
-                            Hr AS
-                        </option>
-                        <option>
-                            Hr OS
-                        </option>
-                        <option>
-                            Social Media Marketing
-                        </option>
-                        <option>
-                            Graphic Design
-                        </option>
-                        <option>
-                            Business Administrator
-                        </option>
-                        <option>
-                            Web Development
-                        </option>
+                    <option>
+                        Hr AS
+                    </option>
+                    <option>
+                        Hr OS
+                    </option>
+                    <option>
+                        Social Media Marketing
+                    </option>
+                    <option>
+                        Graphic Design
+                    </option>
+                    <option>
+                        Business Administrator
+                    </option>
+                    <option>
+                        Web Development
+                    </option>
 
-                    </select>
-                </div>
-                <div class="item">
-                    <label for="reason">
-                        What is the reason for being late?<span>*</span>
+                </select>
+            </div>
+            <div class="item" id="ti">
+                <label for="time">Time<span>*</span></label>
+                <input id="time" type="text" name="time"  placeholder="Enter Your Attendance Time" />
+            </div>
+            <div class="item">
+                <label for="reason">
+                    What is the reason for being late?<span>*</span>
 
-                    </label>
-                    <textarea id="reason" type="text" name="reason"
-                        placeholder="Write your reason here ,if not put (.)"
-                        required></textarea>
-                </div>
-                <div class="btn-block">
-                    <input type="submit" value="submit" name="submit"
-                        id="btn" />
-                </div>
+                </label>
+                <textarea id="reason" type="text" name="reason"
+                          placeholder="Write your reason here ,if not put (.)"
+                          required></textarea>
+            </div>
+            <div class="btn-block">
+                <input type="submit" value="submit" name="submit" id="btn" />
+            </div>
 
-                <footer>
-                    <p>© 2025 Computex. All Rights Reserved. |</p>
+            <footer>
+                <p>© 2025 Computex. All Rights Reserved. |</p>
 
-                </footer>
-                <div class="footerr">
-                    <a href="#">
-                        Privacy
-                        Policy
-                    </a> | <a href="https://www.facebook.com/share/1BC8ijftM6/">
-                        Contact
-                        Us
-                    </a>
-                </div>
-            </form>
-        </div>
-        <script
-            src="https://script.google.com/macros/s/AKfycbyvc7rb1K-n7IzDzeW3JX9wD9McD4voxEZZA7fI3RwWAdjSHd1NNsk4ioU_16yJ-F7K/exec"></script>
+            </footer>
+            <div class="footerr">
+                <a href="#">
+                    Privacy
+                    Policy
+                </a> | <a href="https://www.facebook.com/share/1BC8ijftM6/">
+                    Contact
+                    Us
+                </a>
+            </div>
+        </form>
+    </div>
+    <script>
+    document.getElementById('myForm').addEventListener('submit', function (event) {
+        var now = new Date();
+        var date = now.getHours() + '-' + (now.getMinutes() + 1) ;
+        document.getElementById('time').value = date;
+    });
+</script>
+    <script src="https://script.google.com/macros/s/AKfycbyEFiljxL0GQamQ6BA839dT3fxGxH4ujqp8Mj2D7qEAG9fXlnhFZ0rNZyXPP_hrBh1T/exec"></script>
 
     </body>
 </html>

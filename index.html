@@ -109,7 +109,7 @@
     <script>
     document.getElementById('myForm').addEventListener('submit', function (event) {
         var now = new Date();
-        var date = now.getHours() + '-' + (now.getMinutes() + 1) ;
+        var date = (now.getHours()) + '-' + (now.getMinutes() ) ;
         document.getElementById('time').value = date;
     });
 </script>

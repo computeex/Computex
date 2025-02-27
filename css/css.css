@@ -228,6 +228,8 @@ textarea {
         padding-bottom: 5px;
     }
 }
+#ti{    display:none;
+}
 
 .cont {
     width: 100%;
